@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eloheh Healthcare - Management Team</title>
+  <style>
+    body {
+      font-family: 'Verdana', sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0; padding: 0;
+    }
+
+    .banner {
+      background-image: url('enter url');
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .banner h1 {
+      font-size: 36px;
+      font-family: 'Georgia', serif;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h2 { font-size: 22px; color: #004c3f; }
+
+    .highlight { font-style: italic; color: #0077b6; }
+
+    .important {
+      font-weight: bold;
+      font-size: 18px;
+      font-family: 'Arial', sans-serif;
+      color: #b22222:
+    }
+
+    a { color: #0077b6; text-decoration: none; }
+
+    .download-btn {
+      display: inline-block;
+      background-color: #004c3f;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3a ease;
+    }
+
+    .download-btn:hover { background-color: #006b50; }
+
+    img {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      text-align: center;
+      color: gray;
+    }
+
+    .collapsible {
+      background-color: #e6f1ed;
+      color: #004c3f;
+      cursor: pointer;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .collapsible:hover { background-color: #d1e8e0; }
+
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      border-left: 4px solid #004c3f;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <h1>Eloheh Healthcare</h1>
+  </div>
+
+  <div class="container">
+    <p><i>Meet the leaders behind our mission of compassionate, inclusive care.</i></p>
+
+    <!-- Collapsible: Executive Team -->
+    <button class="collapsible">👩‍⚕️ Executive Leadership</button>
+    <div class="content">
+      <p><span class="important">Dr. Maria Soto</span> – <b>Chief Executive Officer</b></p>
+      <p class="highlight">Over 25 years in healthcare leadership. Visionary for holistic health delivery systems.</p>
+
+      <p><span class="important">James Wu</span> – <b>Chief Operating Officer</b></p>
+      <p class="highlight">Leads logistics, operations, and service coordination across all Eloheh locations.</p>
+    </div>
+
+    <!-- Collapsible: Department Heads -->
+    <button class="collapsible">🏢 Department Heads</button>
+    <div class="content">
+      <ul>
+        <li><b>Angela Patel</b> – Director of Community Wellness</li>
+        <li><b>David Brooks</b> – Medical Technology Lead</li>
+        <li><b>Linda Kim</b> – HR and Training Manager</li>
+        <li><b>Rafael Martinez</b> – Director of Mobile Health Outreach</li>
+      </ul>
+    </div>
+
+    <!-- Collapsible: Core Values -->
+    <button class="collapsible">💡 Our Guiding Principles</button>
+    <div class="content">
+      <ol>
+        <li>Empathy in every encounter</li>
+        <li>Innovation in health delivery</li>
+        <li>Equity in access</li>
+        <li>Transparency and trust</li>
+      </ol>
+    </div>
+
+    <!-- Team Photo -->
+    <img src="https://media.istockphoto.com/id/1312706425/photo/medical-staff-standing-in-hospital-corridor.jpg" alt="Eloheh Leadership Team" />
+
+    <!-- External Link -->
+    <p>Learn more about healthcare leadership at the <a href="https://hbr.org/topic/health-care" target="_blank">Harvard Business Review Health Care section</a>.</p>
+
+    <!-- Download Button -->
+    <p><a class="download-btn" href="Eloheh_OrgChart.pdf" download>Download Our Organizational Chart</a></p>
+
+    <!-- Contact -->
+    <p><a href="mailto:roni@elohehhealth.org">Contact Me</a></p>
+  </div>
+
+  <footer>
+    <p>Last updated:
+      <script>document.write(new Date(document.lastModified).toLocaleDateString());</script>
+    </p>
+  </footer>
+
+  <!-- Collapsible Script -->
+  <script>
+    document.querySelectorAll(".collapsible").forEach(btn => {
+      btn.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const c = this.nextElementSibling;
+        c.style.display = c.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+  
+</body>
+</html>
